@@ -12,7 +12,15 @@
 ## 構築手順
 ***
 
-### 1. distディレクトリ削除
+### 1. Docker build
+```
+docker-compose build --no-cache
+```
+
+## 静的サイト確認手順
+***
+
+### 1. distディレクトリ削除 `※ 初めて確認する時は不要`
 
 ```
 rm -r dist
@@ -39,20 +47,12 @@ rm -r dist
 cp -r ../sample-web/dist dist
 ```
 
-### 3. Docker build
-```
-docker-compose build --no-cache
-```
-
-## 静的サイト確認手順
-***
-
-### 1. Docker 起動
+### 3. Docker 起動
 ```
 docker-compose up
 ```
 
-### 2. ブラウザで、 `http://localhost:3001/` にアクセス
+### 4. ブラウザで、 `http://localhost:3001/` にアクセス
 
 ## その他設定
 ***
