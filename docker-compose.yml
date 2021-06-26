@@ -1,0 +1,11 @@
+version: '3.7'
+services: 
+  web:
+    build: "./docker"
+    container_name: "centos7"
+    ports:
+      - 3001:3001
+    volumes:
+      - "./dist:/var/www/html"
+      - "./apache/httpd.conf:/etc/httpd/conf/httpd.conf"
+    privileged: true
